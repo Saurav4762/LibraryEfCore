@@ -1,0 +1,6 @@
+@EfCoreDbContext_HostAddress = http://localhost:5263
+
+GET {{EfCoreDbContext_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
