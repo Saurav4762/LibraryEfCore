@@ -8,5 +8,5 @@ public class MemberRequestDto
     public string Phone { get; set; }
     
     public int BookId { get; set; }
-    public int MemberId { get; set; }
+    public int AuthorId { get; set; }
 }

@@ -8,5 +8,4 @@ public class Book
     
     public int  AuthorId { get; set; }
     public virtual Author Author { get; set; }
-    public List<Author> Authors { get; set; }
 }

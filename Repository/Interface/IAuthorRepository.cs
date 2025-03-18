@@ -1,6 +1,12 @@
-﻿namespace EfCoreDbContext.Repository.Interface;
+﻿using EfCoreDbContext.Contracts.ResponseDto;
+using EfCoreDbContext.Entities;
 
-public class IAuthorRepository
+namespace EfCoreDbContext.Repository.Interface;
+
+public interface IAuthorRepository 
 {
+    Task<AuthorResponseDto> GetAuthorById(int id, AuthorResponseDto output);
+    Task<List<AuthorResponseDto>> GetAuthors(int id);
+    
     
 }

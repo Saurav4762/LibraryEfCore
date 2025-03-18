@@ -1,6 +1,10 @@
-﻿namespace EfCoreDbContext.Repository.Interface;
+﻿using EfCoreDbContext.Contracts.ResponseDto;
 
-public class IBookRepository
+namespace EfCoreDbContext.Repository.Interface;
+
+public interface IBookRepository
 {
+    Task<BookResponseDto> GetBookById(int id);
+    Task<List<BookResponseDto>> GetBooksAsync();
     
-}
+} 

@@ -6,8 +6,11 @@ namespace EfCoreDbContext.Data
 {
     public class EfCoreDbcontext : DbContext
     {
+        public DbContextOptions<EfCoreDbcontext> Options { get; private set; }
+
         public EfCoreDbcontext(DbContextOptions<EfCoreDbcontext> options) : base(options)
         {
+            Options = options;
         }
 
         public DbSet<Author> Authors { get; set; }
@@ -18,7 +21,9 @@ namespace EfCoreDbContext.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Author>().ToTable("Student");
+            modelBuilder.Entity<Author>().ToTable("Authors");
+            modelBuilder.Entity<Book>().ToTable("Books");
+            modelBuilder.Entity<Member>().ToTable("Members");
         }
     }
     

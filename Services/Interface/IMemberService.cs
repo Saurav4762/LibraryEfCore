@@ -5,7 +5,7 @@ namespace EfCoreDbContext.Services.Interface;
 
 public interface IMemberService
 {
-    Task<Member> CreateMember(Member member);
+    Task<Member> CreateMember(MemberRequestDto dto);
     Task<Member> UpdateMember(int id, MemberRequestDto dto);
     Task DeleteMember(int id);
     
